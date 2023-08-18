@@ -22,17 +22,14 @@ class PersephoneWindow(QWidget):
         self.addColumn(boxLayout)
         
         self.setLayout(boxLayout) 
-        self.resize(1200, 800)
         self.setWindowTitle("TDeck")
-        self.show()
+        self.showMaximized()
         
     def addColumn(self, layout):
         
         # ブラウザ設定
         browser = QWebEngineView()
-        browser.load(QUrl("https://twitter.com/home"))        
-        browser.resize(1000,600)
-        browser.move(200,200)
+        browser.load(QUrl("https://twitter.com/home"))
         browser.setWindowTitle("TDeck")
         
         layout.addWidget(browser)
